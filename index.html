@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>SQL queries for beancount by aumayr</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>SQL queries for beancount</h1>
+        <p>Sample queries for the SQL-like Beancount Query Language. Contribute your own by creating an issue or submitting a pull request. </p>
+
+        <p class="view"><a href="https://github.com/aumayr/beancount-sql-queries">View the Project on GitHub <small>aumayr/beancount-sql-queries</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/aumayr/beancount-sql-queries/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/aumayr/beancount-sql-queries/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/aumayr/beancount-sql-queries">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h1>
+
+<p>This is a list of example SQL queries for <a href="http://furius.ca/beancount/"><code>beancount</code></a>. It should be a reference and inspiration for users of <code>beancount</code>. </p>
+
+<p>If you want to contribute and add your own query to this list please create an issue or submit a pull request here: <a href="https://github.com/aumayr/beancount-sql-queries">github.com/aumayr/beancount-sql-queries</a> </p>
+
+<p>For more information about the SQL-like query language for <code>beancount</code> visit the <a href="http://furius.ca/doc/query">Beancount Query Language documentation</a>.</p>
+
+<h1>
+<a id="queries" class="anchor" href="#queries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Queries</h1>
+
+<h3>
+<a id="usd-expenses-in-2015-grouped-by-month" class="anchor" href="#usd-expenses-in-2015-grouped-by-month" aria-hidden="true"><span class="octicon octicon-link"></span></a>USD-Expenses in 2015, grouped by month</h3>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span>
+  MONTH(<span class="pl-k">date</span>) <span class="pl-k">AS</span> month,
+  <span class="pl-c1">SUM</span>(COST(position)) <span class="pl-k">AS</span> balance
+<span class="pl-k">WHERE</span>
+   account ~ <span class="pl-s"><span class="pl-pds">'</span>Expenses:<span class="pl-pds">'</span></span> <span class="pl-k">AND</span>
+   currency <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>USD<span class="pl-pds">'</span></span> <span class="pl-k">AND</span>
+   YEAR(<span class="pl-k">date</span>) <span class="pl-k">=</span> <span class="pl-c1">2015</span>
+<span class="pl-k">GROUP BY</span> <span class="pl-c1">1</span>
+<span class="pl-k">ORDER BY</span> <span class="pl-c1">1</span>;</pre></div>
+
+<h3>
+<a id="account-balances-in-2013" class="anchor" href="#account-balances-in-2013" aria-hidden="true"><span class="octicon octicon-link"></span></a>Account Balances in 2013</h3>
+
+<div class="highlight highlight-source-sql"><pre>balances <span class="pl-k">FROM</span> year <span class="pl-k">=</span> <span class="pl-c1">2013</span></pre></div>
+
+<h3>
+<a id="balances-of-accounts-which-contain-phone-in-their-name" class="anchor" href="#balances-of-accounts-which-contain-phone-in-their-name" aria-hidden="true"><span class="octicon octicon-link"></span></a>Balances of accounts which contain "<code>Phone</code>" in their name</h3>
+
+<p>This query shows the balances of accounts which contain "<code>Phone</code>" in their name, 
+on each day a transaction was made on that account.  </p>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span>
+  <span class="pl-k">date</span>, account, position, balance 
+<span class="pl-k">WHERE</span> 
+  account ~ <span class="pl-s"><span class="pl-pds">'</span>Phone<span class="pl-pds">'</span></span>;</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/aumayr">aumayr</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
