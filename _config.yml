@@ -4,7 +4,7 @@ description: Sample queries for the SQL-like Beancount Query Language. Contribut
 destination: ./_gen/
 
 exclude: ["css/_scss",]
-permalink: /permalink/:year/:month/:title.html
+permalink: /beancount-sql-queries/query/:title.html
 
 markdown: kramdown
 kramdown:
