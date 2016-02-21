@@ -198,15 +198,15 @@ body > *:last-child {
 }
 
 a {
-  color: #607D8B;
+  color: #00BCD4;
   text-decoration: none;
 }
 a:hover {
-  color: #566f7c;
+  color: #00a5bb;
   text-decoration: underline;
 }
 a:active, a:visited {
-  color: #4b626d;
+  color: #008fa1;
   text-decoration: underline;
 }
 
@@ -945,6 +945,19 @@ section.content article header p.author {
   float: right;
   clear: right;
   margin-top: -5px;
+}
+section.content article pre.highlight {
+  position: relative;
+}
+section.content article pre.highlight a {
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  background: #CCC;
+  color: #FFF;
+  padding: 0px 7px;
+  border-bottom-left-radius: 2px;
+  border-bottom: 1px solid #C4C4C4;
 }
 
 body > footer {

@@ -36,6 +36,21 @@ section.content article {
         }
     }
 
+    pre.highlight {
+        position: relative;
+
+        a {
+            position: absolute;
+            top: -2px;
+            right: 0px;
+            background: #CCC;
+            color: #FFF;
+            padding: 0px 7px;
+            border-bottom-left-radius: 2px;
+            border-bottom: 1px solid #C4C4C4;
+        }
+    }
+
 //    .footnotes {
 //        border-top: 4px solid #ccc;
 //    }
