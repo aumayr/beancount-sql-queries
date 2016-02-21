@@ -1,7 +1,6 @@
 # SQL queries for Beancount
 
-[aumayr.github.io/beancount-sql-queries/](http://aumayr.github.io/beancount-sql-
-queries/)
+[aumayr.github.io/beancount-sql-queries/](http://aumayr.github.io/beancount-sql-queries/)
 
 *Please see the [`gh-pages`-branch](https://github.com/aumayr/beancount-sql-
 queries/tree/gh-pages) for the source to this page.*
