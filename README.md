@@ -2,8 +2,7 @@
 
 [aumayr.github.io/beancount-sql-queries/](http://aumayr.github.io/beancount-sql-queries/)
 
-*Please see the [`gh-pages`-branch](https://github.com/aumayr/beancount-sql-
-queries/tree/gh-pages) for the source to this page.*
+*Please see the [`gh-pages`-branch](https://github.com/aumayr/beancount-sql-queries/tree/gh-pages) for the source to this page.*
 
 This is a Jekyll-generated page with a list of example SQL queries for
 [Beancount](http://furius.ca/beancount/). It should be a reference and
