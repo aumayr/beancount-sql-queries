@@ -2,8 +2,8 @@
 layout: post
 title: "Monthly expenses report"
 description: "Monthly expenses report"
-#author: "Alex Johnstone"
-#author_email: "alexjj@gmail.com"
+author: "Alex Johnstone"
+author_email: "alexjj@gmail.com"
 category: Site
 tags: []
 ---

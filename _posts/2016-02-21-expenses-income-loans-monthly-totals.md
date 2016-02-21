@@ -2,8 +2,8 @@
 layout: post
 title: "Expenses, Income and Loans/Mortgage monthly totals"
 description: "Expenses, Income and Loans/Mortgage monthly totals"
-#author: "Alex Johnstone"
-#author_email: "alexjj@gmail.com"
+author: "Alex Johnstone"
+author_email: "alexjj@gmail.com"
 category: Site
 tags: []
 ---
@@ -14,7 +14,7 @@ Useful for saving as `csv`/pasting into a spreadsheet.
 
 ~~~sql
 SELECT
-    year, month, root(account, 1) as ar, sum(position) as pos
+    year, month, root(account, 1) as account, sum(position) as total
   FROM
     date > 2010-01-01 AND date < 2016-12-31
   WHERE
@@ -22,7 +22,7 @@ SELECT
      account ~ "Liabilities:Mortgage" OR
      account ~ "Liabilities:Loan" OR
      account ~ "Income"
-  GROUP BY year, month, ar
-  ORDER BY year, month, ar
+  GROUP BY year, month, account
+  ORDER BY year, month, account
   FLATTEN
 ~~~
