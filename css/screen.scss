@@ -1,0 +1,51 @@
+---
+---
+@import "normalize";
+@import "mixins";
+@import "_github";
+@import "_pygments";
+
+html {
+    width: 100%;
+    max-width: 960px;
+    margin: 30px auto;
+}
+
+body>header {
+    margin-bottom: 40px;
+}
+
+section.content article {
+    margin-bottom: 30px;
+
+    header {
+        h1, h2, h3 {
+            display: inline-block;
+        }
+
+        a.permalink {
+            float: right;
+            margin-top: 0.3em;
+        }
+
+        p.author {
+            display: block;
+            float: right;
+            clear: right;
+            margin-top: -5px;
+        }
+    }
+
+//    .footnotes {
+//        border-top: 4px solid #ccc;
+//    }
+}
+
+body>footer {
+    margin-top: 3em;
+    font-size: 0.9em;
+
+    &, a {
+        color: #bbb;
+    }
+}

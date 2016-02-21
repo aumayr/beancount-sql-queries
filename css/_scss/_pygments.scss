@@ -1,0 +1,116 @@
+/*
+   Copyright 2014 GitHub Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+*/
+
+.c /* comment */ {
+  color: #969896;
+}
+
+.c1      /* constant, markup.raw, meta.diff.header, meta.module-reference, meta.property-name, support, support.constant, support.variable, variable.other.constant */,
+.s .v /* string variable */ {
+  color: #0086b3;
+}
+
+.e  /* entity */,
+.en /* entity.name */ {
+  color: #795da3;
+}
+
+.s .s1 /* string source */,
+.smi      /* storage.modifier.import, storage.modifier.package, storage.type.java, variable.other, variable.parameter.function */ {
+  color: #333;
+}
+
+.ent /* entity.name.tag */ {
+  color: #63a35c;
+}
+
+.k /* keyword, storage, storage.type */ {
+  color: #a71d5d;
+}
+
+.pds              /* punctuation.definition.string, string.regexp.character-class */,
+.s                /* string */,
+.s .pse .s1 /* string punctuation.section.embedded source */,
+.sr               /* string.regexp */,
+.sr .cce       /* string.regexp constant.character.escape */,
+.sr .sra       /* string.regexp string.regexp.arbitrary-repitition */,
+.sr .sre       /* string.regexp source.ruby.embedded */ {
+  color: #183691;
+}
+
+.v /* variable */ {
+  color: #ed6a43;
+}
+
+.id /* invalid.deprecated */ {
+  color: #b52a1d;
+}
+
+.ii /* invalid.illegal */ {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.sr .cce /* string.regexp constant.character.escape */ {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.ml /* markup.list */ {
+  color: #693a17;
+}
+
+.mh        /* markup.heading */,
+.mh .en /* markup.heading entity.name */,
+.ms        /* meta.separator */ {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.mq /* markup.quote */ {
+  color: #008080;
+}
+
+.mi /* markup.italic */ {
+  color: #333;
+  font-style: italic;
+}
+
+.mb /* markup.bold */ {
+  color: #333;
+  font-weight: bold;
+}
+
+.md /* markup.deleted, meta.diff.header.from-file */ {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.mi1 /* markup.inserted, meta.diff.header.to-file */ {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.mdr /* meta.diff.range */ {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.mo /* meta.output */ {
+  color: #1d3e81;
+}
+

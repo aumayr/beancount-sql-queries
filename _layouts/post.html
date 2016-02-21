@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<section class="content single-post">
+    <article>
+        <header>
+            <h3>
+                {% if page.link %}
+                <a href="{{ page.link }}">{{ page.title }}</a>
+                {% else %}
+                {{ page.title }}
+                {% endif %}
+            </h3>
+            <a title="Permalink" class="permalink" href="{{ page.url }}">
+                <time datetime="{{ page.date | %Y-%m-%d %H:%M+01:00 }}">
+                    {{ page.date | date: "%d. %B %Y" }}
+                </time>
+            </a>
+        </header>
+        <section class="entry">
+            {{ page.content }}
+        </section>
+    </article>
+</section>
+<footer>
+    <a href="/">&#8592; Back to homepage</a>
+</footer>
