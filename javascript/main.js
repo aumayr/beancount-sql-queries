@@ -1,4 +1,4 @@
-var baseURL = "http://fava.pythonanywhere.com/query/?bql=";
+var baseURL = "http://fava.pythonanywhere.com/example-3/query/?bql=";
 
 var forEach = function (array, callback, scope) {
   for (var i = 0; i < array.length; i++) {
